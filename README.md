@@ -2,6 +2,8 @@
 
 提供web端monkey测试的扩展
 
+使用：导入dist文件夹到chrome扩展，配置完参数后，右键运行monkey
+
 ![image-20220213223944163](https://raw.githubusercontent.com/KingZhang/kingzhang.github.io/blog/source/assets/img/image-20220213223944163.png)
 
 
