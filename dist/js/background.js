@@ -1,0 +1,2 @@
+(()=>{"use strict";function n(n,e){chrome.tabs.query({active:!0,currentWindow:!0},(function(t){chrome.tabs.sendMessage(t[0].id,n,(function(n){e&&e(n)}))}))}var e="runMonkey",t="stopMonkey";chrome.contextMenus.create({title:"启动Monkey测试",contexts:["all"],onclick:function(){n({cmd:e,value:e},(function(n){}))}}),chrome.contextMenus.create({title:"停止Monkey测试",contexts:["all"],onclick:function(){n({cmd:t,value:t},(function(n){}))}})})();
+//# sourceMappingURL=background.js.map
