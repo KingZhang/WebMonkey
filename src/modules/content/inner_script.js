@@ -1,1 +1,2 @@
-console.log("inline script");
+window.alert = () => {};
+

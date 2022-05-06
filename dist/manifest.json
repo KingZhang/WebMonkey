@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "webMonkey",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "web monkey",
 	"icons":
 	{
@@ -24,6 +24,7 @@
 		{
 			"matches": ["<all_urls>"],
 			"js": ["js/gremlins.min.js", "js/content.js"],
+			"css": ["content.css"],
 			"run_at": "document_end"
 		}
 	],

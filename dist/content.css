@@ -1,0 +1,19 @@
+.monkeyAnalysis {
+  position: fixed;
+  z-index: 9999;
+  background: #e9e9e9;
+  padding: 16px;
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+}
+.monkeyAnalysis:hover {
+  opacity: 1;
+}
+.memoryChart {
+  height: 200px;
+  width: 500px;
+}
+
+
+/*# sourceMappingURL=content.css.map*/
