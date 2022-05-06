@@ -56,7 +56,7 @@ function runByConfig(config) {
  * @param {*} config 
  */
 function hideElement(config) {
-    const { hiddenElements } = config;
+    const { hiddenElements = [] } = config;
     hiddenElements.forEach((item) => {
         const { type, value } = item;
         if (type === 'id') {
@@ -107,8 +107,8 @@ function runMouseMode(config) {
 function runElementMode(config) {
     const {
         elementEvent = ['click', 'input'],
-        elements,
-        elementExt,
+        elements = ['[tabindex]', 'input', 'select', 'a'],
+        elementExt = [],
         maskElements = [],
     } = config;
     // get top element
@@ -154,9 +154,8 @@ function runElementMode(config) {
     tabInterval = setInterval(() => {
         const triggerList = [];
         const extention = elementExt.map((item) => item.key);
-        document
-            .querySelectorAll([...elements, ...extention].join(','))
-            .forEach((element) => {
+        const allElements = document.querySelectorAll([...elements, ...extention].join(',')) || [];
+        allElements.forEach((element) => {
                 if (
                     isVisable(element) &&
                     topElement &&
